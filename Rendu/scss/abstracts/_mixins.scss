@@ -16,17 +16,33 @@
     display: flex;
     justify-content: $justify;
     align-items: $align;
+    flex-direction: column; 
 }
 
-
-@mixin display-flex-column($justify: center, $align: center) {
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: column;
+@mixin button(
+    $background-color: $color-light-green,
+    $color: $color-white,
+    $font-size: 24px,
+    $height: 61px,
+    $width: 256px,
+    $border-radius: 10px
+) {
+    border-radius: 10px;
 }
 
-
-@mixin button($background-color:$color-light-green, $color:$color-white, $font-size:24px, $height:61px, $width:256px, $border-radius:10px) {
-border-radius: 10px;
+@mixin button(
+    $background-color: $color-white,
+    $color: $color-light-green,
+    $height: 61px,
+    $width: 256px,
+    $border-radius: 10px,
+    $border: none
+) {
+    border-radius: $border-radius;
+    background-color: $color-white;
+    color: $color-light-green;
+    border-radius: $border-radius;
+    height: $height;
+    width: $width;
+    border: $border;
 }
